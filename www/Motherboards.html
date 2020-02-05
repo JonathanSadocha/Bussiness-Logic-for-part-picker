@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Motherboard Part List</title>
+                <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+            <link rel="stylesheet" href="css/Proj443Styles.css">
+        </head>
+        <body>
+            <header><h1>Choose Your Motherboard</h1></header>
+            <div class="container">
+                <select id="mbOption" >
+                                <option value="9dJMpCqWWvqobeWr8Le8 ">ASRock - B450 Pro4 ATX AM4 Motherboard</option>
+                                <option value="HilNbkXndzXRuICiw4fN ">ASRock - B450 Pro4 ATX AM4 Motherboard</option>
+                                <option value="SWB8hl7ay9akGEqkIdZG ">MSI - Z97 PC MATE ATX LGA1150 Motherboard</option>
+                                <option value = "kVjkfGX51hmaE74uYWfg">ASRock - Z390 Phantom Gaming 4 ATX LGA1151 Motherboard</option>
+                                <option value = "zZVPnSPcA0JLQdNsUbwl">Gigabyte Z390 I AORUS PRO WIFI Mini ITX LGA1151</option>
+                </select>
+                <button class="button" onclick="getDataMB()">Show Details</button>
+                <button class="button" onclick="saveDataMB()">Save Data</button>
+                <ul id="mbList"></ul>
+                <p id="mbStatus"></p>
+            </div>
+            <nav>
+                        <ul>
+                                <li><button onclick="window.location='SelectParts.html';" type="button">Back</button></li>
+                        </ul>
+            </nav>
+
+            <script>
+                var config = {
+                        apiKey: "AIzaSyCMqu3I_FSBDPN183rrckuDgAb7YfeTQWo",
+                        authDomain: "project-3c81b.firebaseapp.com",
+                        databaseURL: "https://project-3c81b.firebaseio.com",
+                        projectId: "project-3c81b",
+                        storageBucket: "project-3c81b.appspot.com",
+                        messagingSenderId: "276577228985"
+                };
+                firebase.initializeApp(config);
+                const db4 = firebase.firestore();
+            </script>
+            <script src="app.js"></script>
+        </body>
+</html>

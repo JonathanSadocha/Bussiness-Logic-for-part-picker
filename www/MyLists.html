@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>My List</title>
+                <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+            <link rel="stylesheet" href="css/Proj443Styles.css">
+        </head>
+<body>
+	<header><h1>My List</h1></header>
+	<div id="container">
+			<ul id="myList"></ul>
+			<p>Enter Name of this list to share: </p>
+			<input id="listName" type="text" value="">
+			<br>
+			<button class="button" onclick="shareList()">Share</button>
+			<button class="button" onclick="clearList()">Clear List</button>
+			<p id="test"></p>
+	</div>
+	<nav>
+			<ul>
+				<li><button onclick="window.location='Home.html';" type="button">Back</button></li>
+			</ul>
+	</nav>
+	<script>
+		var config = {
+				apiKey: "AIzaSyCMqu3I_FSBDPN183rrckuDgAb7YfeTQWo",
+				authDomain: "project-3c81b.firebaseapp.com",
+				databaseURL: "https://project-3c81b.firebaseio.com",
+				projectId: "project-3c81b",
+				storageBucket: "project-3c81b.appspot.com",
+				messagingSenderId: "276577228985"
+		};
+		firebase.initializeApp(config);
+		const db2 = firebase.firestore();
+	</script>
+	<script src="app.js"></script>
+</body>
+</html>

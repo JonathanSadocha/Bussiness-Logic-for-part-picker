@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>GPU Part List</title>
+                <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+            <link rel="stylesheet" href="css/Proj443Styles.css">
+        </head>
+        <body>
+            <header><h1>Choose Your GPU</h1></header>
+            <div class="container">
+                <select id="gpuOption" >
+                                <option value="0JArRDpUW5Ye0200mdlB">Asus - Radeon RX 480 8 GB Video Card</option>
+                                <option value="J6ZQNWDYt1VFd0jDuTAc">Asus Radeon RX VEGA 64 8 GB ROG STRIX</option>
+                                <option value="NRapQP0w22iKqZ3CWyay">Gigabyte - GeForce RTX 2070 8 GB GAMING 8G Video Card (GV-N2070GAMING-8GC)</option>
+                                <option value="RYNyprV67m98JtVZ8Iyh">Gigabyte - GeForce RTX 2060 6 GB OC Video Card</option>
+                                <option value="f0kko3yqO1ezzvGiydkh">Zotac - GeForce RTX 2080 8 GB Video Card</option>
+                </select>
+                <button class="button" onclick="getDataGPU()">Show Details</button>
+                <button class="button" onclick="saveDataGPU()">Save Data</button>
+                <ul id="gpuList"></ul>
+                <p id="gpuStatus"></p>
+            </div>
+            <nav>
+                        <ul>
+                                <li><button onclick="window.location='SelectParts.html';" type="button">Back</button></li>
+                        </ul>
+            </nav>
+
+            <script>
+                var config = {
+                        apiKey: "AIzaSyCMqu3I_FSBDPN183rrckuDgAb7YfeTQWo",
+                        authDomain: "project-3c81b.firebaseapp.com",
+                        databaseURL: "https://project-3c81b.firebaseio.com",
+                        projectId: "project-3c81b",
+                        storageBucket: "project-3c81b.appspot.com",
+                        messagingSenderId: "276577228985"
+                };
+                firebase.initializeApp(config);
+                const db6 = firebase.firestore();
+            </script>
+            <script src="app.js"></script>
+        </body>
+</html>

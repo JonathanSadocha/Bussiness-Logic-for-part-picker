@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>RAM Part List</title>
+                <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+            <link rel="stylesheet" href="css/Proj443Styles.css">
+        </head>
+        <body>
+            <header><h1>Choose Your RAM</h1></header>
+            <div class="container">
+                <select id="memOption" >
+                        <option value="9izDNDwyLkpbuHMNgBVm">Corsair - Vengeance Pro 16 GB (2 x 8 GB) DDR3-2133 Memory</option>
+                        <option value="IUtla0pkyFWZEYcSX4pM">Kingston - 8 GB (1 x 8 GB) DDR3-1333 Memory</option>
+                        <option value="TlE7sy0saDCBFEt6Yk2i">Corsair - Vengeance LPX 32 GB (2 x 16 GB) DDR4-3000 Memory</option>
+                        <option value = "fEaHOMl1XAd3OdCFFA57">G.Skill Trident Z RGB 16 GB (2 x 8 GB) DDR4-3200</option>
+                        <option value = "j3Vhg1ON75tIHhbGziOi">G.Skill - Aegis 16 GB (2 x 8 GB) DDR4-3000 Memory</option>
+                </select>
+                <button class="button" onclick="getData()">Show Details</button>
+                <button class="button" onclick="saveData()">Save Data</button>
+                <ul id="dataList"></ul>
+                <p id="status"></p>
+            </div>
+            <nav>
+                        <ul>
+                                <li><button onclick="window.location='SelectParts.html';" type="button">Back</button></li>
+                        </ul>
+            </nav>
+
+            <script>
+                var config = {
+                        apiKey: "AIzaSyCMqu3I_FSBDPN183rrckuDgAb7YfeTQWo",
+                        authDomain: "project-3c81b.firebaseapp.com",
+                        databaseURL: "https://project-3c81b.firebaseio.com",
+                        projectId: "project-3c81b",
+                        storageBucket: "project-3c81b.appspot.com",
+                        messagingSenderId: "276577228985"
+                };
+                firebase.initializeApp(config);
+                const db = firebase.firestore();
+            </script>
+            <script src="app.js"></script>
+        </body>
+</html>

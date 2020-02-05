@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--Bootstaps-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PC Part Sharing</title>
+        <link rel="stylesheet" href="css/Proj443Styles.css">
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    </head>
+
+	<body>
+        <nav>
+		<ul>
+            <li><button onclick="window.location='SelectParts.html';" type="button">Create</button></li>
+            <li><button onclick="window.location='CommunityLists.html';" type="button">Shared</button></li>
+            <li><button onclick="window.location='MyLists.html';" type="button">Your List</button></li>
+            <li><button onclick="mainApp.logOut()" type="button">Sign out</button></li>
+		</ul>
+    </nav>
+    <h2> Rate our app</h2>
+    <div class="stars">
+        <form action="">
+          <input class="star star-5" id="star-5" type="radio" name="star"/>
+          <label class="star star-5" for="star-5"></label>
+          <input class="star star-4" id="star-4" type="radio" name="star"/>
+          <label class="star star-4" for="star-4"></label>
+          <input class="star star-3" id="star-3" type="radio" name="star"/>
+          <label class="star star-3" for="star-3"></label>
+          <input class="star star-2" id="star-2" type="radio" name="star"/>
+          <label class="star star-2" for="star-2"></label>
+          <input class="star star-1" id="star-1" type="radio" name="star"/>
+          <label class="star star-1" for="star-1"></label>
+        </form>
+        </div>
+
+<script src="firebase.js"> </script>
+<script src="login.js"> </script>
+<script src="main.js"> </script>
+	</body>
+</html>

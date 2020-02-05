@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>PSU Part List</title>
+                <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+            <link rel="stylesheet" href="css/Proj443Styles.css">
+        </head>
+        <body>
+            <header><h1>Choose Your PSU</h1></header>
+            <div class="container">
+                <select id="psuOption" >
+                                <option value="KmoGYDloDO4i2UpvHldw">Corsair - TXM Gold 550 W 80+ Gold Certified Semi-Modular ATX Power Supply</option>
+                                <option value="N5g6oBaDnys62PpZMIko">EVGA SuperNOVA G3 650 W 80+ Gold Certified Fully-Modular ATX</option>
+                                <option value="QdDYilZTzSZvgHgH29Z4">EVGA - 750 W 80+ Gold Certified Semi-Modular ATX Power Supply</option>
+                                <option value = "T0zxF95VMsBkOdtbJkRF">Ultra - 550 W ATX Power Supply</option>
+                                <option value = "i6WLBndgPrTq4ePyE1CK">Corsair - RM 550 W 80+ Gold Certified Fully-Modular ATX Power Supply</option>
+                </select>
+                <button class="button" onclick="getDataPSU()">Show Details</button>
+                <button class="button" onclick="saveDataPSU()">Save Data</button>
+                <ul id="psuList"></ul>
+                <p id="psuStatus"></p>
+            </div>
+            <nav>
+                        <ul>
+                                <li><button onclick="window.location='SelectParts.html';" type="button">Back</button></li>
+                        </ul>
+            </nav>
+
+            <script>
+                var config = {
+                        apiKey: "AIzaSyCMqu3I_FSBDPN183rrckuDgAb7YfeTQWo",
+                        authDomain: "project-3c81b.firebaseapp.com",
+                        databaseURL: "https://project-3c81b.firebaseio.com",
+                        projectId: "project-3c81b",
+                        storageBucket: "project-3c81b.appspot.com",
+                        messagingSenderId: "276577228985"
+                };
+                firebase.initializeApp(config);
+                const db7 = firebase.firestore();
+            </script>
+            <script src="app.js"></script>
+        </body>
+</html>

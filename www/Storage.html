@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Storage Part List</title>
+                <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+            <link rel="stylesheet" href="css/Proj443Styles.css">
+        </head>
+        <body>
+            <header><h1>Choose Your Storage</h1></header>
+            <div class="container">
+                <select id="storeOption" >
+                                <option value="NWesWohX32JMvOSEqGmr">Hitachi - 1 TB 3.5" 7200RPM Internal Hard Drive</option>
+                                <option value="QaRCQ0WgOkpt72pCwtrh">Hitachi - Ultrastar 7K3000 2 TB 3.5" 7200RPM Internal Hard Drive</option>
+                                <option value="TSY92JrBgad3d1tEWubv">Samsung 970 Evo 500 GB M.2-2280 SSD</option>
+                                <option value = "ftSHaCESIvznBjqRAeYQ">Western Digital - Caviar Blue 1 TB 3.5" 7200RPM Internal Hard Drive</option>
+                                <option value = "i2aVuquorCO5CWpOtr2B">Seagate - Constellation ES 3 TB 3.5" 7200RPM Internal Hard Drive</option>
+                </select>
+                <button class="button" onclick="getDataStore()">Show Detail</button>
+                <button class="button" onclick="saveDataStore()">Save Data</button>
+                <ul id="storeList"></ul>
+                <p id="storeStatus"></p>
+            </div>
+            <nav>
+                        <ul>
+                                <li><button onclick="window.location='SelectParts.html';" type="button">Back</button></li>
+                        </ul>
+            </nav>
+
+            <script>
+                var config = {
+                        apiKey: "AIzaSyCMqu3I_FSBDPN183rrckuDgAb7YfeTQWo",
+                        authDomain: "project-3c81b.firebaseapp.com",
+                        databaseURL: "https://project-3c81b.firebaseio.com",
+                        projectId: "project-3c81b",
+                        storageBucket: "project-3c81b.appspot.com",
+                        messagingSenderId: "276577228985"
+                };
+                firebase.initializeApp(config);
+                const db5 = firebase.firestore();
+            </script>
+            <script src="app.js"></script>
+        </body>
+</html>

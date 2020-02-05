@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--Bootstaps-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PC Part Sharing</title>
+        <link rel="stylesheet" href="css/Proj443Styles.css">
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    </head>
+<body>
+        <h1>Item Description</h1>
+        <div>
+            <ul id="parts-list"></ul>
+        </div>
+        <script>
+                // Initialize Firebase
+                var config = {
+                        apiKey: "AIzaSyCMqu3I_FSBDPN183rrckuDgAb7YfeTQWo",
+                        authDomain: "project-3c81b.firebaseapp.com",
+                        databaseURL: "https://project-3c81b.firebaseio.com",
+                        projectId: "project-3c81b",
+                        storageBucket: "project-3c81b.appspot.com",
+                        messagingSenderId: "276577228985"
+                };
+                firebase.initializeApp(config);
+                const db = firebase.firestore();
+        </script>
+        <script src="ItemJS/MemoryDesc.js"></script>
+<script src="firebase.js"> </script>
+<script src="login.js"> </script>
+<script src="main.js"> </script>
+</body>
+</html>

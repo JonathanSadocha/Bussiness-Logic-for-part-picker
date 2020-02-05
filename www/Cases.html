@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Case Part List</title>
+                <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+            <link rel="stylesheet" href="css/Proj443Styles.css">
+        </head>
+        <body>
+            <header><h1>Choose Your Case</h1></header>
+            <div class="container">
+                <select id="caseOption" >
+                                <option value="3gABKMBhF6zMwwooCdcB">NZXT - H500i (White) ATX Mid Tower Case</option>
+        <option value="OQZhDdy8f5stMHGsn25I">Apevia - X-SNIPER2-GN ATX Mid Tower Case</option>
+        <option value="bDntMklJkENkzMn4pgjF">NZXT H200i (Black) Mini ITX Tower</option>
+        <option value="bvyhbAFUBsM8ruWHKKXb">Phanteks - Eclipse P300 Tempered Glass (Black) ATX Mid Tower Case</option>
+        <option value="yNFMdnFFvimjRLX84prB">NZXT - S340 (Black/Red) ATX Mid Tower Case</option>
+                </select>
+                <button class="button" onclick="getDataCase()">Show Details</button>
+                <button class="button" onclick="saveDataCase()">Save Data</button>
+                <ul id="caseList"></ul>
+                <p id="caseStatus"></p>
+            </div>
+            <nav>
+                        <ul>
+                                <li><button onclick="window.location='SelectParts.html';" type="button">Back</button></li>
+                        </ul>
+            </nav>
+
+            <script>
+                var config = {
+                        apiKey: "AIzaSyCMqu3I_FSBDPN183rrckuDgAb7YfeTQWo",
+                        authDomain: "project-3c81b.firebaseapp.com",
+                        databaseURL: "https://project-3c81b.firebaseio.com",
+                        projectId: "project-3c81b",
+                        storageBucket: "project-3c81b.appspot.com",
+                        messagingSenderId: "276577228985"
+                };
+                firebase.initializeApp(config);
+                const db8 = firebase.firestore();
+            </script>
+            <script src="app.js"></script>
+        </body>
+</html>

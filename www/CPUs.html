@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>CPU Part List</title>
+                <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+            <link rel="stylesheet" href="css/Proj443Styles.css">
+        </head>
+        <body>
+            <header><h1>Choose Your CPU</h1></header>
+            <div class="container">
+                <select id="cpuOption" >
+                        <option value="IpzknoZpN2maOE0BU3Q4">Intel - Core i7-9700K 3.6 GHz 8-Core Processor</option>
+                        <option value="K0rfmqMBV8pb9vVSGleq">Intel Core i5-9600K 3.7 GHz 6-Core</option>
+                        <option value="i1tmxGoCAenQ11NBBiIM">AMD - Ryzen 5 2600X 3.6 GHz 6-Core Processor</option>
+                        <option value="k5l7QbxpY0brsQbC3uTN">Intel - Core i5-4460 3.2 GHz Quad-Core Processor</option>
+                        <option value="xrQDHlydzpwHGEp2VOEU">AMD - FX-4130 3.8 GHz Quad-Core Processor</option>
+                </select>
+                <button class="button" onclick="getDataCPU()">Show Details</button>
+                <button class="button" onclick="saveDataCPU()">Save Data</button>
+                <ul id="cpuList"></ul>
+                <p id="cpuStatus"></p>
+            </div>
+            <nav>
+                        <ul>
+                                <li><button onclick="window.location='SelectParts.html';" type="button">Back</button></li>
+                        </ul>
+            </nav>
+
+            <script>
+                var config = {
+                        apiKey: "AIzaSyCMqu3I_FSBDPN183rrckuDgAb7YfeTQWo",
+                        authDomain: "project-3c81b.firebaseapp.com",
+                        databaseURL: "https://project-3c81b.firebaseio.com",
+                        projectId: "project-3c81b",
+                        storageBucket: "project-3c81b.appspot.com",
+                        messagingSenderId: "276577228985"
+                };
+                firebase.initializeApp(config);
+                const db3 = firebase.firestore();
+            </script>
+            <script src="app.js"></script>
+        </body>
+</html>
